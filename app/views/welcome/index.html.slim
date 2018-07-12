@@ -3,6 +3,7 @@ header.text-center
     a href='https://github.com/Brexchange/Brexchange'
       img src='#{image_path 'logo.png'}' width='336px'
     section
+      h1 BREXCHANGE
       - Rails.configuration.i18n.available_locales.each do |locale|
         h3 = t(:slogan, locale: locale)
     #getstart.row
