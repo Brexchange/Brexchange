@@ -49,8 +49,12 @@ html lang="en"
               = link_to t(".menus.sections.members"), admin_members_path
 
           - if can? :manage, Ticket
-            li class = check_active(Proof)
+            li class = check_active('tickets')
               = link_to t(".menus.items.operating.tickets"), admin_tickets_path
+
+          - if can? :manage, Announcement
+            li class = check_active('announcements')
+              = link_to t(".menus.items.operating.announcements"), admin_announcements_path
 
           li.dropdown class = check_active('statistic')
             = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do

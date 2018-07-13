@@ -5,6 +5,7 @@ namespace :admin do
   resources :id_documents,     only: [:index, :show, :update]
   resource  :currency_deposit, only: [:new, :create]
   resources :proofs
+  resources :announcements
   resources :tickets, only: [:index, :show] do
     member do
       patch :close

@@ -1,0 +1,10 @@
+= simple_form_for [:admin, announcement] do |f|
+  = f.input :title
+  = f.input :content, as: :text
+  = f.input :publish_at
+  = f.input :public, inline_label: t('simple_form.labels.announcement.public'), wrapper: :horizontal_boolean
+  .form-group.actions
+    .col-xs-offset-8.col-xs-14
+      = f.button :submit, class: "btn-default"
+      - unless announcement.new_record?
+        = link_to t('actions.destroy'), url_for([:admin, announcement]), class: 'btn btn-danger', method: 'DELETE', data: { confirm: t('actions.destroy_confirm')}

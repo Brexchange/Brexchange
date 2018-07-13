@@ -43,6 +43,7 @@ Peatio::Application.routes.draw do
   get '/documents/websocket_api'
   get '/documents/oauth'
   resources :documents, only: [:show]
+  resources :announcements, only: [:index]
   resources :two_factors, only: [:show, :index, :update]
 
   scope module: :private do

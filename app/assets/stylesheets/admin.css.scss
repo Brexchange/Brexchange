@@ -8,6 +8,9 @@
 @import "bootstrap-wysihtml5/core-b3";
 @import "bootstrap-wysihtml5/wysiwyg-color";
 
+@import "font-awesome-sprockets";
+@import 'font-awesome';
+
 @import 'vars/basic';
 @import 'vars/custom';
 
@@ -93,4 +96,51 @@ span.detail-section {
       content: attr(data-title);
     }
   }
+}
+
+// Annoucements styles
+.action-bar {
+  margin-bottom: 2em;
+  h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+.post-item {
+  padding: 15px;
+  margin-bottom: 1em;
+  background: #fff;
+  border-radius: 5px;
+  .fa-lock {
+    font-size: 20px;
+    color: #bbb;
+    float: right;
+  }
+  .post-heading {
+    font-size: 20px;
+    color: #222;
+    margin: 0 0 10px;
+  }
+  .post-content {
+    margin: 0 0 10px;
+  }
+  .post-meta {
+    color: #999;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+
+.announcement_publish_at {
+  .form-control {
+    display: inline-block;
+    width: 70px;
+  }
+}
+.form-group.actions .btn {
+  margin-right: 10px;
+}
+textarea#announcement_content {
+  height: 280px;
 }

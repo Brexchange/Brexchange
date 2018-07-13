@@ -14,6 +14,7 @@ module Admin
       can :manage, Ticket
       can :manage, IdDocument
       can :manage, TwoFactor
+      can :manage, Announcement
 
       can :menu, Deposit
       can :manage, ::Deposits::Bank

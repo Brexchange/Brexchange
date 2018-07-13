@@ -1,3 +1,10 @@
+= content_for :before do
+  - unless @announcement.blank?
+    #announcements.row
+      .wrapper
+        = @announcement.title
+        = link_to t('learn_more'), announcements_path(anchor: "post-#{@announcement.id}")
+
 table#setting_list.table
   tr
     td.col-xs-2.text-center.vertical-center: i.fa.fa-envelope-o.fa-2x

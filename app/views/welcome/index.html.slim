@@ -3,7 +3,7 @@ header.text-center
     a href='https://github.com/Brexchange/Brexchange'
       img src='#{image_path 'logo.png'}' width='336px'
     section
-      h1 BREXCHANGE
+     h1 BREXCHANGE
       - Rails.configuration.i18n.available_locales.each do |locale|
         h3 = t(:slogan, locale: locale)
     #getstart.row
@@ -17,4 +17,8 @@ header.text-center
         .col-xs-6.col-xs-offset-9.text-center
           a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
           a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
-          a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+          a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")    - unless @announcement.blank?
+      #announcements.row
+        .wrapper
+          = @announcement.title
+          = link_to t('learn_more'), announcements_path(anchor: "post-#{@announcement.id}")
