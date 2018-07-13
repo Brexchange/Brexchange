@@ -9,8 +9,8 @@ class DocumentsController < ApplicationController
     end
   end
 
-  def api_v2
-    render 'api_v2', layout: 'api_v2'
+  def apiv2
+    render 'apiv2', layout: 'api_v2'
   end
 
   def websocket_api

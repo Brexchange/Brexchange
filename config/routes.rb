@@ -39,7 +39,7 @@ Peatio::Application.routes.draw do
     resources :activations, only: [:new, :edit, :update]
   end
 
-  get '/documents/api_v2'
+  get '/documents/apiv2'
   get '/documents/websocket_api'
   get '/documents/oauth'
   resources :documents, only: [:show]
