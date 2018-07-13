@@ -9,7 +9,7 @@ header.text-center
         h3 = t(:slogan, locale: locale)
     #getstart.row
       - unless current_user
-        .col-xs-4.col-xs-offset-8
+        .col-xs-4.col-xs-offset-6
           a href="#{signin_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.signin")
         - if ENV['WEIBO_AUTH'] == "true"
           .col-xs-4
@@ -21,3 +21,8 @@ header.text-center
           a href="#{market_path(current_market)}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.getstart")
           a href="#{funds_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.funds")
           a href="#{settings_path}" class="btn btn-primary btn-lg btn-block" role="button" = t("header.settings")
+    - unless @announcement.blank?
+      #announcements.row
+        .wrapper
+          = @announcement.title
+          = link_to t('learn_more'), announcements_path(anchor: "post-#{@announcement.id}")

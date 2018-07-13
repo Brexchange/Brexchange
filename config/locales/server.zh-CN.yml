@@ -1125,6 +1125,10 @@ zh-CN:
           fund_extra: 提现标签
           account_balance: 可用金额
           member_name: 账户名
+      announcement:
+        content: 内容
+        publish_at: 发布时间
+        public: 所有人可见
   admin:
     deposits:
       banks:
@@ -1173,6 +1177,9 @@ zh-CN:
     documents:
       index:
         new: 新建文档
+    announcements:
+      index:
+        new: 创建新公告
     statistic:
       filter: 筛选
       summary: 总结
@@ -1461,6 +1468,7 @@ zh-CN:
       enabled: 实时更新已开启。
       new_trade: "您的%{kind}委托 #%{id} 以 %{price} %{quote_unit} 价格成交，%{kind} %{volume} %{base_unit}。"
   back: 返回
+  learn_more: 了解更多
   invalid_password: 无效的登录密码
   all: 全部
   date:
@@ -1507,6 +1515,7 @@ zh-CN:
     withdraws: 提现管理
     statistics: 数据统计
     id_documents: 身份验证
+    announcements: 公告管理
   footer:
     about: 关于我们
     privacy: 隐私条款
@@ -1657,6 +1666,7 @@ zh-CN:
             documents: 文档管理
             withdraws: 提现管理
             tickets: 服务单管理
+            announcements: 公告管理
           deposits:
             currency: 法币充值
     application:

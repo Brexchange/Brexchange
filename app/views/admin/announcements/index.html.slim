@@ -1,0 +1,25 @@
+.row
+  .col-md-24
+    .action-bar.clearfix
+      a.btn.btn-primary.pull-right href='#{new_admin_announcement_path}' = t('.new')
+      h2= t('admin_header.announcements')
+    .posts
+      - @announcements.each do |item|
+        .post-item
+          - unless item.public
+            i.fa.fa-lock
+          h4.post-heading= item.title
+          .post-content= simple_format(item.content)
+          ul.post-meta.list-inline
+            li
+              = item.author.name
+            li
+              = item.created_at
+            li
+              = t('simple_form.labels.announcement.publish_at')
+            li
+              = item.publish_at
+            li
+              = link_to t('actions.edit'), edit_admin_announcement_path(item)
+
+      = paginate @announcements

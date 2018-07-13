@@ -44,7 +44,7 @@ SimpleForm.setup do |config|
     ## Inputs
     #
     b.use :label, wrap_with: { tag: :div, class: 'col-xs-8 text-right'}
-    b.use :input, wrap_with: { tag: :div, class: 'col-xs-14'}
+    b.use :input, wrap_with: { tag: :div, class: 'col-xs-14'}, class: 'form-control'
     b.use :error, wrap_with: { tag: :span, class: 'error text-danger col-xs-14 col-xs-offset-8' }
     b.use :hint,  wrap_with: { tag: :span, class: 'hint col-xs-14 col-xs-offset-8' }
   end
@@ -61,6 +61,18 @@ SimpleForm.setup do |config|
     b.use :label
     b.use :input, wrap_with: { tag: :div }
     b.use :hint,  wrap_with: { tag: :span, class: 'hint' }
+  end
+
+  config.wrappers :horizontal_boolean, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+    b.use :html5
+    b.use :placeholder
+  
+    b.wrapper tag: 'div', class: 'checkbox col-xs-offset-8 col-xs-14' do |wr|
+      wr.use :label_input
+      
+      wr.use :error, wrap_with: { tag: 'span', class: 'help-inline' }
+      wr.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+    end
   end
 
   # The default wrapper to be used by the FormBuilder.
@@ -159,7 +171,7 @@ SimpleForm.setup do |config|
   # config.cache_discovery = !Rails.env.development?
 
   # Default class for inputs
-  config.input_class = 'form-control'
+  # config.input_class = 'form-control'
 end
 
 module SimpleForm

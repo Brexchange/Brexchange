@@ -1,0 +1,15 @@
+= content_for :frame do
+  .container.announcements
+    .posts
+      - @announcements.each do |item|
+        - if item.public || !item.public && current_user
+          .post-item id="post-#{item.id}"
+            h4.post-heading= item.title
+            .post-content= simple_format(item.content)
+            ul.post-meta.list-inline
+              li
+                = t('simple_form.labels.announcement.publish_at')
+              li
+                = item.publish_at
+
+      = paginate @announcements
