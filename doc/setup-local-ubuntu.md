@@ -55,18 +55,17 @@ Install bundler
 
 ### Step 3: Install Redis
 
-Be sure to install the latest stable Redis, as the package in the distro may be a bit old:
-
-    sudo apt-add-repository -y ppa:rwky/redis
-    sudo apt-get update
-    sudo apt-get install redis-server
+You can follow this tutorial 
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-redis-on-ubuntu-16-04
 
 ### Step 4: Install RabbitMQ
 
 Please follow instructions here: https://www.rabbitmq.com/install-debian.html
 
-    sudo apt-add-repository 'deb http://www.rabbitmq.com/debian/ testing main'
-    curl http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -
+    echo 'deb http://www.rabbitmq.com/debian/ testing main' |
+    sudo tee /etc/apt/sources.list.d/rabbitmq.list
+    wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc |
+    sudo apt-key add -
     sudo apt-get update
     sudo apt-get install rabbitmq-server
 
@@ -128,7 +127,7 @@ Peatio uses Capybara with PhantomJS to do the feature tests, so if you want to r
 
 A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do but Node.js is recommended.
 
-    curl -sL https://deb.nodesource.com/setup | sudo bash -
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     sudo apt-get install nodejs
 
 
@@ -140,7 +139,7 @@ A JavaScript Runtime is needed for Asset Pipeline to work. Any runtime will do b
 
 **Clone the project**
 
-    git clone git://github.com/peatio/peatio.git
+    git clone git@github.com:InfraexDev/peatio.git
     cd peatio
     bundle install
 
@@ -190,6 +189,10 @@ More details to visit [pusher official website](http://pusher.com)
 
 When daemons don't work, check `log/#{daemon name}.rb.output` or `log/peatio:amqp:#{daemon name}.output` for more information (suffix is '.output', not '.log').
 
+**Run solvency**
+
+    rake solvency:liability_proof
+ 
 **Run Peatio**
 
     # start server

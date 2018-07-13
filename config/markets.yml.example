@@ -1,10 +1,50 @@
-- id: btccny
+- id: nbriop
   code: 3
-  #name: BTC/CNY      # default name
-  base_unit: btc
+  #name: NBR/IOP      # default name
+  base_unit: NBR
+  quote_unit: IOP
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: iop, fixed: 4}
+  ask: {fee: 0, currency: nbr, fixed: 4}
+  sort_order: 1
+  #visible: false     # default to true
+- id: iopcny
+  code: 4
+  name: IOP/CNY     
+  base_unit: iop
   quote_unit: cny
   #price_group_fixed: 1 # aggregate price levels in orderbook
-  bid: {fee: 0, currency: cny, fixed: 2}
-  ask: {fee: 0, currency: btc, fixed: 4}
+  bid: {fee: 0, currency: cny, fixed: 4}
+  ask: {fee: 0, currency: iop, fixed: 8}
+  sort_order: 1
+  #visible: false     # default to true
+- id: ethbtc
+  code: 5
+  name: ETH/BTC      
+  base_unit: eth
+  quote_unit: btc
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: btc, fixed: 4}
+  ask: {fee: 0, currency: eth, fixed: 4}
+  sort_order: 1
+  #visible: false     # default to true
+- id: nbrbtc
+  code: 6
+  name: NBR/BTC    
+  base_unit: nbr
+  quote_unit: btc
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: nbr, fixed: 8}
+  ask: {fee: 0, currency: btc, fixed: 8}
+  sort_order: 1
+  #visible: false     # default to true
+- id: dashcny
+  code: 4
+  name: DASH/CNY     
+  base_unit: dash
+  quote_unit: cny
+  #price_group_fixed: 1 # aggregate price levels in orderbook
+  bid: {fee: 0, currency: cny, fixed: 4}
+  ask: {fee: 0, currency: dash, fixed: 8}
   sort_order: 1
   #visible: false     # default to true

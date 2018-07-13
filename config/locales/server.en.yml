@@ -21,6 +21,8 @@ en:
       deposits/bank: Deposit Bank
       withdraws/bank: Withdraw Bank
       withdraws/satoshi: Withdraw
+      withdraws/iop: Withdraw
+      withdraws/dash: Withdraw
     attributes:
       api_token:
         access_key: Access Key
@@ -292,15 +294,34 @@ en:
   market:
     currency:
       btc: BTC
+      eth: ETH
       cny: CNY
       doge: DOGE
       pts: PTS
       ltc: LTC
+      nbr: NBR
+      iop: IOP
+      dash: DASH
   currency:
     satoshi:
       key: BTC
       code: BTC
       name: Bitcoin
+      format: '0,0.0000'
+    dashpays:
+      key: DASH
+      code: DASH
+      name: Dash
+      format: '0,0.00000'
+    fermat:
+      key: IOP
+      code: IOP
+      name: IOP
+      format: '0,0.00000'
+    ether:
+      key: ETH
+      code: ETH
+      name: Ethereum
       format: '0,0.0000'
     bitsharesx:
       key: BTS
@@ -463,7 +484,14 @@ en:
     satoshi:
       key: Block Chain
       title: Bitcoin Deposits
-      intro: Deposit bitcoin from your own wallet address to Peatio account
+      intro: Deposit bitcoin from your own wallet address to BREXCHANGE account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    ether:
+      key: ethereum
+      title: Ethereum Deposits
+      intro: Deposit Ethereum from your own wallet address to Tradealtcoin account
       latency: 1 confirmation
       transfer: Manual
       go: Deposit
@@ -481,6 +509,9 @@ en:
       satoshis:
         gen_address:
           require_transaction: it can't generate new address if it hasn't been used.
+      ethers:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
       banks:
         destroy:
           notice: Revocation request is successful.
@@ -496,30 +527,6 @@ en:
           branch: Receive Bank Branch
           hodler: Receive holder
           account: Receive Account
-    fund_sources:
-      index:
-        manage_coin_address: Manage %{name} Address
-        manage_bank_account: Manage Bank Account
-        guide_intro_coin: You can creat one new %{name} address, and it can be available
-          for your withdrawal later.
-        guide_intro_bank: You can creat one new fund source, and it can be available
-          for your deposit or withdrawal later.
-        new: New
-        currency: Currency
-        bank: Bank
-        label: Label
-        account: Account
-        address: Address
-        action: Action
-        delete: Delete
-        are_you_sure: Are you sure?
-      new:
-        selector: Select Bank
-        uid: Account Number
-        label: Label
-        label_placeholder: Fill any content
-        address: Address
-        extra_hint: If your bank is no longer in the list, please contact customer service
     history:
       transaction:
         Deposit: Deposit
@@ -645,7 +652,7 @@ en:
       view_open_tickets: View open tickets
     account_versions:
       index:
-        description: Every transaction and every penny of income in Peatio are well
+        description: Every transaction and every penny of income in BREXCHANGE are well
           documented and exhaustive.
     api_tokens:
       user_tokens:
@@ -693,12 +700,24 @@ en:
       index:
         liability-proof: Proof of Liabilities
         btc-assets: BTC Assets
+        nbr-assets: NBR Assets
+        zcr-assets: ZCR Assets
+        iop-assets: IOP Assets
         cny-assets: CNY Assets
+        eth-assets: ETH Assets
       liability_tabs:
         verify-btc: Verify My BTC Assets
         verify-cny: Verify My CNY Assets
+        verify-eth: Verify My ETH Assets
+        verify-nbr: Verify My NBR Assets
+        verify-iop: Verify My IOP Assets
+        verify-zcr: Verify My ZCR Assets
         btc-assets-total: 'Total BTC assets of exchange: '
         cny-assets-total: 'Total CNY assets of exchange: '
+        eth-assets-total: 'Total ETH assets of exchange: '
+        nbr-assets-total: 'Total NBR assets of exchange: '
+        iop-assets-total: 'Total IOP assets of exchange: '
+        zcr-assets-total: 'Total ZCR assets of exchange: '
       liability_proof:
         title: Proof of Liabilities
         intro: As an exchange, our liabilities refer to the sum of money (in both
@@ -706,7 +725,7 @@ en:
           this page, we present you our liabilities. We also provide you a way to
           verify that your account balance is indeed part of our liabilities.
         how-to-verify: How to verify an exchange is solvent?
-        how-to-verify-uri: https://peatio.com/documents/liability_proof
+        how-to-verify-uri: https://BREXCHANGE.com/documents/liability_proof
       liability_data:
         liability-proof-generating: Proof of Liability generation in process, please
           come back after 30 minutes.
@@ -719,6 +738,11 @@ en:
         title: BTC Assets
         intro: All of exchange's BTC assets are listed here.
         total: Total BTC Assets
+        address: Address
+      eth_assets:
+        title: ETH Assets
+        intro: All of exchange's ETH assets are listed here.
+        total: Total ETH Assets
         address: Address
       cny_assets:
         title: CNY Assets
@@ -734,6 +758,10 @@ en:
         account_history: Account History
         cny_format: '0.00'
         btc_format: '0.00000000'
+        eth_format: '0.00000000'
+        iop_format: '0.00000000'
+        nbr_format: '0.00000000'
+        dash_format: '0.00000000'
         reason:
           cny:
             strike_add: Plus
@@ -742,6 +770,12 @@ en:
             withdraw: Withdraw
             fix: Fix
           btc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          eth:
             strike_add: Plus
             strike_sub: Sub
             deposit: Deposit
@@ -789,6 +823,8 @@ en:
         all: All Markets
         all_html: "<i class='fa fa-check'></i><span>All Markets</span>"
         cny_html: "<i class='fa fa-check'></i><span>CNY Markets</span>"
+        nbr_html: "<i class='fa fa-check'></i><span>NBR Markets</span>"
+        iop_html: "<i class='fa fa-check'></i><span>IOP Markets</span>"
         btc_html: "<i class='fa fa-check'></i><span>BTC Markets</span>"
         price: Price
         change: "24h %"
@@ -981,6 +1017,7 @@ en:
         title: "%{icon} %{c} Account"
         cny_format: '0.00'
         btc_format: '0.00000000'
+        eth_format: '0.00000000'
         total: Total
   guides:
     private:
@@ -1004,12 +1041,6 @@ en:
           title: Edit API Token
       tickets:
         panel: Tickets
-      fund_sources:
-        panel: Fund source
-        index:
-          title: Create new fund source
-          intro: You can creat one new fund source, and it can be available for your
-            deposit or withdrawal later.
       id_documents:
         panel: Real-name Authentication
         new:
@@ -1046,15 +1077,15 @@ en:
       panel: Login
       new:
         title: Login my account
-        intro: Login Peatio now for you to exchange.
+        intro: Login BREXCHANGE now for you to exchange.
       failure:
         title: Login my account
-        intro: Login Peatio now for you to exchange.
+        intro: Login BREXCHANGE now for you to exchange.
     identities:
       panel: Create Account
       new:
         title: Create My Account
-        intro: This will be your only ID on Peatio which is necessary for your exchange
+        intro: This will be your only ID on BREXCHANGE which is necessary for your exchange
           , deposit and withdrawal . please fill it out carefully.
       edit:
         panel: My Account
@@ -1078,9 +1109,6 @@ en:
       document:
         key: Document link URL key
         title: Document Title
-      fund_source:
-        label: Real name
-        address: Address
       order_bid:
         origin_volume: Buy Volume
         sum: Sum
@@ -1301,7 +1329,7 @@ en:
       trade: Submit and cancel orders
     authorizations:
       new:
-        title: Peatio Application Authorization
+        title: BREXCHANGE Application Authorization
         authorize_html: Authorize <strong class='text-info'>%{name}</strong> to use
           your account?
         scopes: 'This application will be able to:'
@@ -1390,6 +1418,7 @@ en:
     currency:
       cny: CNY
       btc: BTC
+      eth: ETH
     order:
       state:
         done: DONE
@@ -1436,41 +1465,41 @@ en:
 
   mailer:
     dear_user: Dear user,
-    signature: Thanks,<br/>The Peatio Team
+    signature: Thanks,<br/>The BREXCHANGE Team
     please_contact: If it's not you, please <a href='mailto:%{contact_mail}'>contact us</a> ASAP.
     footer: This is an automatically generated email, please do not reply, if you have any question, please <a href="mailto:%{contact_mail}">contact us</a>.
   comment_mailer:
     admin_notification:
-      subject: "[PEATIO] User reply a ticket"
+      subject: "[BREXCHANGE] User reply a ticket"
       notification_content: User %{email} reply a ticket, please follow the link below to see the detail
     user_notification:
-      subject: "[PEATIO] Your ticket got a new reply"
+      subject: "[BREXCHANGE] Your ticket got a new reply"
       notification_content: 'Your ticket got a new reply, please follow the link below to see the detail:'
   deposit_mailer:
     accepted:
-      subject: "[Peatio] Your deposit has been credited into your account"
+      subject: "[BREXCHANGE] Your deposit has been credited into your account"
       content: Your %{currency} deposit has been credited into your account.
   member_mailer:
     notify_signin:
-      subject: "[PEATIO] You have just signed in"
+      subject: "[BREXCHANGE] You have just signed in"
       just_signed_in: You have just signed in.
     google_auth_activated:
-      subject: "[PEATIO] Google authenticator activated"
+      subject: "[BREXCHANGE] Google authenticator activated"
       google_auth_activated: You have activated google authenticator successfully
     google_auth_deactivated:
-      subject: "[PEATIO] Google authenticator deactivated"
+      subject: "[BREXCHANGE] Google authenticator deactivated"
       google_auth_deactivated: You have deactivated google authenticator successfully
     sms_auth_activated:
-      subject: "[PEATIO] SMS authenticator activated"
+      subject: "[BREXCHANGE] SMS authenticator activated"
       sms_auth_activated: You have activated SMS authenticator successfully
     sms_auth_deactivated:
-      subject: "[PEATIO] SMS authenticator deactivated"
+      subject: "[BREXCHANGE] SMS authenticator deactivated"
       sms_auth_deactivated: You have deactivated SMS authenticator successfully
     reset_password_done:
-      subject: "[PEATIO] Your password changed"
+      subject: "[BREXCHANGE] Your password changed"
       successful: Your password has been changed successfully.
     phone_number_verified:
-      subject: "[PEATIO] Your phone number verified"
+      subject: "[BREXCHANGE] Your phone number verified"
       verified: 'Your phone number verified: %{phone_number}'
   system_mailer:
     daily_stats:
@@ -1483,39 +1512,39 @@ en:
       trades_change_total: Trades Changes Total
   ticket_mailer:
     admin_notification:
-      subject: "[PEATIO] User created a new ticket"
+      subject: "[BREXCHANGE] User created a new ticket"
       admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
     author_notification:
-      subject: "[PEATIO] Thank you for submit ticket"
+      subject: "[BREXCHANGE] Thank you for submit ticket"
       thanks_for_submit_ticket: Thank you for submit ticket to us, we will get back to you as soon as possible.
   token_mailer:
     activation:
-      subject: "[Peatio] Account Activation"
-      click_to_verify: 'Thank you for signing up on Peatio, please follow this link to verify your Email:'
+      subject: "[BREXCHANGE] Account Activation"
+      click_to_verify: 'Thank you for signing up on BREXCHANGE, please follow this link to verify your Email:'
       unable_to_click: Copy and open the link in your browser if you are unable to click and visit it.
       link_expire: The link expires in 30 minutes.
     reset_password:
-      subject: "[Peatio] Please Reset Your Password"
+      subject: "[BREXCHANGE] Please Reset Your Password"
       hi: Hi,
       follow_the_link: 'Please follow this link to reset your password within 30 minutes:'
   withdraw_mailer:
     submitted:
-      subject: "[Peatio] Your withdraw state update"
+      subject: "[BREXCHANGE] Your withdraw state update"
       content: The request of your %{currency} withdrawal has been successfully submitted, We will process it as soon as possible. Please be patient with us. Contact us if you have any questions.
     processing:
-      subject: "[Peatio] Your withdraw state update"
+      subject: "[BREXCHANGE] Your withdraw state update"
       content: The request of your %{currency} withdrawal is in process. Please be patient with us. Contact us if you have any questions.
     done:
-      subject: "[Peatio] Your withdraw state update"
+      subject: "[BREXCHANGE] Your withdraw state update"
       content: The request of your %{currency} withdrawal is complete. Please check it out. Contact us if you have any questions.
     withdraw_state:
-      subject: "[Peatio] Your withdraw state update"
+      subject: "[BREXCHANGE] Your withdraw state update"
       your_state: 'Your withdrawal state: '
 
   'true': true
   'false': false
   view_on_github: View on Github
-  slogan: An open-source crypto-currency exchange for world.
+  slogan: A Brazillian cryptocurrency exchange.
   tags:
     vip: VIP
     hero: Hero Member
@@ -1529,9 +1558,9 @@ en:
   gon:
     ask: Ask
     bid: Bid
-    brand: Peatio Exchange
+    brand: BREXCHANGE Exchange
     notification:
-      title: Peatio Exchange
+      title: BREXCHANGE Exchange
       enabled: Notification enabled.
       new_trade: "%{kind} order#%{id} executed at %{price} %{quote_unit} for %{volume} %{base_unit}。"
   back: Back
@@ -1741,9 +1770,9 @@ en:
     application:
       close: Close
     meta:
-      page_title: Peatio - The Opensource Cryptocurrency Exchange
-      page_description: Peatio - The Opensource Cryptocurrency Exchange
-      page_keywords: Peatio,Opensource,Exchange,Cryptocurrency
+      page_title: BREXCHANGE - Cryptocurrency Exchange
+      page_description: BREXCHANGE - Cryptocurrency Exchange
+      page_keywords: BREXCHANGE,Exchange,Cryptocurrency,Lowfees,dash,bitcoin,niobio cash,
   members:
     edit:
       name: Please fill out the application.
@@ -1827,7 +1856,7 @@ en:
       edit:
         submit: Disable
         warning: 'Tip: If you have lost your Two-Factor Authentication by some reason
-          and can''t login your Peatio account, please contact our online customer
+          and can''t login your BREXCHANGE account, please contact our online customer
           service.'
       show:
         step-1: Step 1
@@ -1885,6 +1914,13 @@ en:
       key: Blockchain
       title: Bitcoin Blockchain
       intro: Withdraw Bitcoin to your own Bitcoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    ether:
+      key: Ether
+      title: Ether Blockchain
+      intro: Withdraw Litecoin to your own Ether wallet
       latency: 30 minutes
       transfer: Manual
       go: Withdraw

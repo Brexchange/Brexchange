@@ -4,6 +4,7 @@
   sort_order: 1
   min_confirm: 1
   max_confirm: 3
+
 - id: 400
   key: bank
   currency: cny
@@ -14,3 +15,32 @@
       branch: 'Your Bank Branch'
       holder: 'Your Account Holder'
       account: 'Your Account Number'
+
+- id: 600
+  key: ether
+  currency: eth
+  min_confirm: 1
+  max_confirm: 6
+
+- id: 700
+  key: niobio
+  currency: nbr
+  min_confirm: 1
+  max_confirm: 10
+
+- id: 800
+  key: fermat
+  currency: iop
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+  
+- id: 900
+  key: dashpay
+  currency: dash
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+
+
+  

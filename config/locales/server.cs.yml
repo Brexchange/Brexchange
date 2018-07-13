@@ -1248,7 +1248,7 @@ cs:
       trade: Odeslat a stornovat objednávky
     authorizations:
       new:
-        title: Peatio Applikace Autorizace
+        title: GRAVIEX Applikace Autorizace
         authorize_html: Autorizovat <strong class='text-info'>%{name}</strong> pro Váš účet?
         scopes: 'Tato aplikace je zde:'
         authorize: Autorizovat

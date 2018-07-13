@@ -1,0 +1,11 @@
+- unless @one_niobios.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {niobios: @one_niobios}
+- unless @all_niobios.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {niobios: @all_niobios}
+
+- if @all_niobios.empty? and @one_niobios.empty?
+  h3.text-info.text-center = t('.empty')

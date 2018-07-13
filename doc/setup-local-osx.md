@@ -107,7 +107,7 @@ Peatio uses Capybara with PhantomJS to do the feature tests, so if you want to r
 
 **Clone the project**
 
-    git clone git://github.com/peatio/peatio.git
+    git clone git://github.com/InfraexDev/peatio.git
     cd peatio
     bundle install
 

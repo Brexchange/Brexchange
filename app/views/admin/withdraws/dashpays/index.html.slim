@@ -1,0 +1,11 @@
+- unless @one_dashpays.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {dashpays: @one_dashpays}
+- unless @all_dashpays.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {dashpays: @all_dashpays}
+
+- if @all_dashpays.empty? and @one_dashpays.empty?
+  h3.text-info.text-center = t('.empty')

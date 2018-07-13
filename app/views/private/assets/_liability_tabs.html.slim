@@ -1,6 +1,8 @@
 .tabbable
   ul.nav.nav-tabs
     li.active: a.btc-proof href="#btc-proof" data-toggle="tab" == t('.verify-btc')
+    li.active: a.nbr-proof href="#nbr-proof" data-toggle="tab" == t('.verify-nbr')
+    li.active: a.iop-proof href="#iop-proof" data-toggle="tab" == t('.verify-iop')
     li:        a.cny-proof href="#cny-proof" data-toggle="tab" == t('.verify-cny')
 
   .tab-content
@@ -11,6 +13,22 @@
           == t("currency.icon.btc")
           = @btc_proof.sum
       = render 'liability_data', account: @btc_account, proof: @btc_proof
+
+    #iop-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.iop-assets-total')
+        span.currency
+          == t("currency.icon.iop")
+          = @iop_proof.sum
+      = render 'liability_data', account: @iop_account, proof: @iop_proof
+	  
+    #nbr-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.nbr-assets-total')
+        span.currency
+          == t("currency.icon.nbr")
+          = @nbr_proof.sum
+      = render 'liability_data', account: @nbr_account, proof: @nbr_proof
 
     #cny-proof.tab-pane:        .trade-wrapper
       .assets

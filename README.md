@@ -1,9 +1,11 @@
 An open-source crypto currency exchange
 =====================================
 
+**I'M Back**
+
 [![Code Climate](https://codeclimate.com/github/peatio/peatio.png)](https://codeclimate.com/github/peatio/peatio)
 [![Build Status](https://travis-ci.org/peatio/peatio.png?branch=master)](https://travis-ci.org/peatio/peatio)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/peatio/peatio?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/InfraexDevPeatio/Lobby)
 
 Peatio is a free and open-source crypto currency exchange implementation with the Rails framework and other cutting-edge technology.
 
@@ -17,7 +19,7 @@ Help is greatly appreciated, feel free to submit pull-requests or open issues.
 
 ### Things You Should Know ###
 
-RUNNING A EXCHANGE IS HARD.
+RUNNING AN EXCHANGE IS HARD.
 
 Peatio makes it easier, but running an exchange is still harder than a blog, which you can download the source code and following the guide or even a cool installer and boom!!! a fancy site is there to profit. We always prioritize security and speed higher than 1-click setup. We split Peatio to many components (processes) so it's flexible to deploy and scalable.
 
@@ -58,6 +60,8 @@ You must know what you're doing, there's no shortcut. Please get prepared before
 * [One World Coin](https://oneworldcoin.com)
 * [Bitspark](https://bitspark.io) - Bitcoin Exchange in Hong Kong
 * [MarsX.io](https://acx.io) - Australian Cryptocurrency Exchange
+* [NLexch.com](https://www.nlexch.com) - Dutch Cryptocurrency Exchange
+
 
 ### Mobile Apps ###
 
@@ -78,10 +82,10 @@ You must know what you're doing, there's no shortcut. Please get prepared before
 
 ### Getting started
 
-* [Setup on Mac OS X](doc/setup-osx.md)
-* [Setup on Ubuntu](doc/setup-ubuntu.md)
-* [Deploy production server](doc/deploy-ubuntu.md)
-
+* [Setup on Mac OS X](doc/setup-local-osx.md)
+* [Setup on Ubuntu](doc/setup-local-ubuntu.md)
+* [Deploy production server](doc/deploy-production-server.md)
+* [Setup Ethereum Server](doc/eth.md)
 ### API
 
 You can interact with Peatio through API:
@@ -116,8 +120,8 @@ Want to report a bug, request a feature, contribute or translate Peatio?
 
 * Browse our [issues](https://github.com/peatio/peatio/issues), comment on proposals, report bugs.
 * Clone the peatio repo, make some changes according to our development guidelines and issue a pull-request with your changes.
-* Anything you want to tell us please send it to [community@peatio.com](mailto:community@peatio.com)
-* If you need technical support or customization service, contact us: [sales@peatio.com](mailto:sales@peatio.com)
+* Anything you want to tell us please send it to [community@peatio.com](mailto:me@muhnagy.com)
+* If you need technical support or customization service, contact us: [sales@peatio.com](mailto:me@muhnagy.com)
 
 
 ### License
@@ -127,17 +131,18 @@ Peatio is released under the terms of the MIT license. See [http://peatio.mit-li
 
 ### DONATE
 
-**Every satoshi of your kind donation goes into the ongoing work of making Peatio more awesome.**
+**Every satoshi of your kind donation goes into the rerunning peatio again and making it active and adding support for new features and new 
+currencies.**
 
-**peatio-opensource-donate** address [1HjfnJpQmANtuW7yr1ggeDfyfe1kDK7rm3](https://blockchain.info/address/1HjfnJpQmANtuW7yr1ggeDfyfe1kDK7rm3)
+**Bitcoin** address [38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E](https://blockchain.info/address/38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E)
+
+**Ethereum** address [38jUu1ksNs9d9aFCK8wMPrZtkqDzJjFe5E](https://etherscan.io/address/0x4ba2474e063aec44e23f2bf7fb9e4e2878dbab44)
 
 
 ### What is Peatio?
 
 [Peatio](http://en.wikipedia.org/wiki/Pixiu) (Chinese: 貔貅) is a Chinese mythical hybrid creature considered to be a very powerful protector to practitioners of Feng Shui.
 
-**[This illustration copyright for Peatio Team]**
 
-![logo](public/peatio.png)
 
 

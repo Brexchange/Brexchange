@@ -8,7 +8,7 @@ module FundSourceable
   end
 
   def set_fund_source_attributes
-    if fs = FundSource.find_by_id(fund_source)
+    if fs = FundSource.find_by(id: fund_source)
       self.fund_extra = fs.extra
       self.fund_uid = fs.uid.strip
     end

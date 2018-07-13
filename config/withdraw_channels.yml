@@ -5,6 +5,7 @@
   fee: 0.0005
   inuse: true
   type: WithdrawChannelSatoshi
+
 - id: 400
   key: bank
   currency: cny
@@ -16,3 +17,40 @@
   proportion: true
   inuse: true
   type: WithdrawChannelBank
+
+- id: 500
+  key: ether
+  currency: eth
+  min_confirm: 1
+  max_confirm: 6
+  inuse: true
+  fixed: 8
+  fee: 0.0005
+  type: WithdrawChannelEthereum
+
+- id: 700
+  key: niobio
+  currency: nbr
+  min_confirm: 1
+  max_confirm: 6
+  inuse: true
+  fixed: 8
+  fee: 0.05
+  type: WithdrawChannelNiobio
+
+- id: 800
+  key: fermat
+  currency: iop
+  fixed: 8
+  fee: 0.00005
+  inuse: true
+  type: WithdrawChannelFermat
+  
+- id: 900
+  key: dashpay
+  currency: dash
+  fixed: 8
+  fee: 0.00005
+  inuse: true
+  type: WithdrawChannelDashpay
+  

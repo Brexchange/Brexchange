@@ -1,13 +1,50 @@
 en:
   js:
-    brand: Peatio
+    brand: BREXCHANGE
     submit: Submit
+    cancel: Cancel
+    confirm: Confirm
+    banks:
+      icbc: Industryand Commercial Bank of China
+      cbc: Construction Bank of China
+      bc: Bank of China
+      bcm: Bank of Communications
+      abc: Agriculture Bank of China
+      cmb: China Merchants Bank Ltd
+      cmbc: China Minsheng Banking Co., Ltd
+      cncb: China CITIC Bank
+      hxb: Hua Xia Bank Co., Ltd.
+      cib: Industrial Bank Co., Ltd
+      spdb: Shanghai Pudong Development Bank
+      bob: Bank of Beijing
+      ceb: China Everbright Bank CO.LTD
+      sdb: Shenzhen Development Bank
+      pab: Ping An Bank Co., Ltd.
+      gdb: Guangdong Development Bank
+      psbc: Postal Savings Bank of China
+      bos: Bank of Shanghai
+    fund_sources:
+      manage_bank_account: Bank Account Management
+      manage_bank_account_desc: To facilitate the choice of bank withdrawals address
+      manage_coin_address: Coin Address Management
+      manage_coin_address_desc: To facilitate the choice of coin withdrawals address
+      bank: Bank
+      account: Bank Account
+      label: Label
+      address: Address
+      action: Action
+      add: Add
+      remove: Remove
+      default: Default
     funds:
       deposit: Deposit
       withdraw: Withdraw
       currency_name:
         cny: CNY
         btc: BTC
+        iop: IOP
+        nbr: NBR
+        dash: DASH
       deposit_cny:
         title: Chinese Yuan Deposit
         desc: "To deposit via Bank transfer, please follow these steps:"
@@ -31,12 +68,22 @@ en:
 
       deposit_btc:
         title: BTC Deposit
+        
+      deposit_nbr:
+        title: NBR Deposit
+        
+      deposit_iop:
+        title: IOP Deposit
+
+      deposit_dash:
+        title: DASH Deposit
 
       deposit_coin:
         address: Address
         new_address: New Address
+        confirm_gen_new_address: You sure want to generate a new deposit address?
         open-wallet: Please use your common wallet services, local wallet, mobile terminal or online wallet, select a payment and send.
-        detail: Please paste the address blow in your wallet, and fill in the amount you want to deposit, then confirm and send.
+        detail: Please paste the address below in your wallet, and fill in the amount you want to deposit, then confirm and send.
         scan-qr: Scanning QR code to Pay for In the mobile terminal wallet.
         after_deposit: Once you complete sending, you can check the status of your new deposit below.
         generate-new: Generate new address
@@ -79,6 +126,15 @@ en:
 
       withdraw_btc:
         title: BTC Withdraw
+        
+      withdraw_nbr:
+        title: NBR Withdraw
+
+      withdraw_iop:
+        title: IOP Withdraw
+
+      withdraw_dash:
+        title: DASH Withdraw
 
       withdraw_coin:
         intro: Please fill in the address and amount, then submit the form. It will be confirmed in 10 minutes
@@ -114,7 +170,7 @@ en:
         coin_done: Coin Done
         done: Done
         almost_done: Almost Done
-        canceled: Canceld
+        canceled: Canceled
         failed: Failed
 
     auth:
@@ -132,6 +188,8 @@ en:
     markets:
       market_list:
         all: All Market
-        cny: CNY Market
+        nbr: NBR Market
+        iop: IOP Market
         btc: BTC Market
+        cny: CNY Market
 

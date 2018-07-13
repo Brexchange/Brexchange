@@ -1,0 +1,176 @@
+en:
+  js:
+    brand: BREXCHANGE
+    submit: Enviar
+    cancel: Cancelar
+    confirm: Confirmar
+    banks:
+      icbc: Industryand Commercial Bank of China
+      cbc: Construction Bank of China
+      bc: Bank of China
+      bcm: Bank of Communications
+      abc: Agriculture Bank of China
+      cmb: China Merchants Bank Ltd
+      cmbc: China Minsheng Banking Co., Ltd
+      cncb: China CITIC Bank
+      hxb: Hua Xia Bank Co., Ltd.
+      cib: Industrial Bank Co., Ltd
+      spdb: Shanghai Pudong Development Bank
+      bob: Bank of Beijing
+      ceb: China Everbright Bank CO.LTD
+      sdb: Shenzhen Development Bank
+      pab: Ping An Bank Co., Ltd.
+      gdb: Guangdong Development Bank
+      psbc: Postal Savings Bank of China
+      bos: Bank of Shanghai
+    fund_sources:
+      manage_bank_account: Bank Account Management
+      manage_bank_account_desc: To facilitate the choice of bank withdrawals endereço
+      manage_coin_endereço: Coin endereço Management
+      manage_coin_endereço_desc: To facilitate the choice of coin withdrawals endereço
+      bank: Banco
+      account: Conta do Banco
+      label: Rótulo
+      endereço: endereço
+      action: Ação
+      add: Add
+      remove: Remover
+      default: Padrão
+    funds:
+      deposit: Deposito
+      withdraw: Saque
+      currency_name:
+        cny: CNY
+        btc: BTC
+        iop: IOP
+        nbr: NBR
+        zcr: ZCR
+      deposit_cny:
+        title: Yuan Chinês Deposito
+        desc: "Para depositar por transferência bâncaria, por favor siga estes passos:"
+        desc_item_1: "1. Submit the form to get the identification code."
+        desc_item_2: "2. Transfer the money to exchange's bank account. Please make sure your referral code was written on the form you fill in."
+        desc_item_3: "3. Your deposit will be confirmed as soon as the money is received."
+        attention: "Attention: The name of your bank account must be the same as your account name on our site, otherwise your deposit may fail."
+        from: De
+        to: Para
+        deposit_name: Seu Nome
+        deposit_account: Conta de Depósito
+        add: Add
+        manage: Gerenciar
+        amount: Quantidade de Deposito
+        min_amount: At least 10 yuan
+        to_account: Conta
+        to_name: Nome
+        to_bank_name: Nome do Banco
+        opening_bank_name: Account where created
+        remark: 'Referral Code (Transfer identification code)'
+
+      deposit_btc:
+        title: BTC Deposito
+
+      deposit_coin:
+        endereço: endereço
+        new_endereço: novo endereço
+        confirm_gen_new_endereço: Você tem certeza que quer gerar um novo endereço de depósito?
+        open-wallet: Please use your common wallet services, local wallet, mobile terminal or online wallet, select a payment and send.
+        detail: Please paste the endereço below in your wallet, and fill in the amount you want to deposit, then confirm and send.
+        scan-qr: Scanning QR code to Pay for In the mobile terminal wallet.
+        after_deposit: Once you complete sending, you can check the status of your new deposit below.
+        generate-new: Generate new endereço
+
+      deposit_history:
+        title: Historico de Depósito
+        number: '#'
+        identification: Código de Identificação
+        time: Time
+        txid: ID da Transação
+        confirmations: Confirmações
+        from: De
+        amount: Quantidade
+        state_and_action: "Estado/Ação"
+        cancel: cancelar
+        no_data: Não há dados de histórico
+
+        submitting: Enviando
+        cancelled: Cancelado
+        submitted: Enviado
+        accepted: Aceito
+        rejected: Rejeitado
+        checked: Checado
+        warning: Atenção
+        suspect: Suspeito
+
+      withdraw_cny:
+        title: Chinese Yuan Withdraw
+        intro: Select the bank to cash withdrawal amount and enter the account number and complete submission.
+        intro_2: Your bank account and name must be consistent with the real-name authentication name.
+        attention: "Working Hours: 9:00 - 18:00"
+        account_name: Account Name
+        withdraw_endereço: Withdraw endereço
+        balance: Balance
+        withdraw_amount: Withdraw Amount
+        manage_withdraw: Manage Withdraw
+        fee_explain: About Fee
+        min: At least
+        withdraw_all: Withdraw all
+
+      withdraw_btc:
+        title: BTC Saque
+
+      withdraw_coin:
+        intro: Por favor, preencha o endereço e o valor e envie o formulário. Será confirmado em 10 minutos
+        label: Rótulo
+        balance: Balanço
+        amount: Quantidade
+        manage_withdraw: Gerenciar Endereço
+        min: At least
+        withdraw_all: Sacar Tudo
+        fee_explain: Sobre a fee
+
+      withdraw_history:
+        title: Histórico de Saque
+        number: Numero
+        withdraw_time: Time
+        withdraw_account: Conta de Saque
+        withdraw_endereço: endereço
+        withdraw_amount: Quantidade
+        actual_amount: Quantidade Atual
+        fee: Taxa
+        miner_fee: Taxa
+        state_and_action: "Estado/Ação"
+        cancel: Cancelar
+        no_data: Aqui não tem nenhum histórico
+
+        submitting: Enviando
+        submitted: Enviado
+        rejected: Rejeitado
+        accepted: Aceito
+        suspect: Suspeito
+        processing: Processando
+        coin_ready: Coin Pronta
+        coin_done: Coin Done
+        done: Feito
+        almost_done: Almost Done
+        canceled: Cancelado
+        failed: Falhou
+
+    auth:
+      please_active_two_factor: Por favor, defina primeiro o número do celular ou o google authenticator.
+      submit: Enviar
+      otp_placeholder: 6 digitos senha
+      google_app: Google Authenticator
+      sms: Verificação via SMS
+      send_code: Enviar Código
+      send_code_alt: Resend in COUNT seconds
+      hints:
+        app: O Google Authenticator irá gerar novamente uma nova senha a cada trinta segundos, insira antes.
+        sms: We'll send a text message to you phone with verify code.
+
+    markets:
+      market_list:
+        all: All Market
+        nbr: NBR Market
+        iop: IOP Market
+        btc: BTC Market
+
